@@ -1,0 +1,31 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Use this app to find new and compatible friends! Requires the following basic npm packages: express, body-parser, path",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkallgren08/Friendfinder.git"
+  },
+  "keywords": [
+    "friendfinder",
+    "express",
+    "body-parser",
+    "path"
+  ],
+  "author": "Michael Kallgren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkallgren08/Friendfinder/issues"
+  },
+  "homepage": "https://github.com/mkallgren08/Friendfinder#readme"
+}
