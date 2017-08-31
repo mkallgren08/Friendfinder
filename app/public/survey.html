@@ -16,11 +16,6 @@
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
         crossorigin="anonymous"></script>
     
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
-        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
-        crossorigin="anonymous">
-    
         <!-- Latest compiled and minified JavaScript for Bootstrap-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
@@ -35,7 +30,9 @@
         <!-- Chosen jQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
-        <link rel="stylesheet" href="./style.css">
+
+
+        <!-- <link rel="stylesheet" href="./style.css"> -->
         
     <title>Friendfinder Survey</title>
 </head>
@@ -43,444 +40,138 @@
     <div class="container">
         <h2>Survey Questions</h2>
         <hr>
+        <div>
+            <a href="/">
+                <button type="button" class="btn btn-lg btn-primary">
+                <h4><span class="glyphicon glyphicon-home"></span> Go to Homepage</h4>
+                </button>
+            </a>	
+        </div>
         <h3><strong>About You</strong></h3>
         <!-- Name Input -->
         <h4>Your Name (Required)</h4>
         <input type="text" name id= "name" class = "form-control" required>
         <!-- Photo input -->
         <h4>Link to A Picture of You (Required)</h4>
-        <input type="text" name id= "name" class = "form-control" required>
+        <input type="text" name id= "photo" class = "form-control" required>
         <hr>
 
         <h3><strong>Question 1</strong></h3>
-        <h4></h4>
-
-        <select data-placeholder="" class="chosen-select" id="q1" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q8_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>
-            </div>
+        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <div class = "radioGroup ansOptions" id = "q1">
+            <label class="radio-inline"><input type="radio" name="ques1" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques1" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques1" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques1" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques1" value = "5">Strongly Agree</label>
         </div>
         <br>
-
         <h3><strong>Question 2</strong></h3>
-        <h4></h4>
+        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q2" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q2_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>
-            </div>
+        <div class = "radioGroup ansOptions" id = "q2">
+            <label class="radio-inline"><input type="radio" name="ques2" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques2" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques2" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques2" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques2" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 3</strong></h3>
-        <h4></h4>
+        <h4>Roleplaying games (Dungeons and Dragons, Shadowrun, etc) are a great activity with friends.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q3" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q3_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>
-            </div>
+        <div class = "radioGroup ansOptions" id = "q3">
+            <label class="radio-inline"><input type="radio" name="ques3" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques3" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques3" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques3" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques3" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 4</strong></h3>
-        <h4></h4>
+        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q4" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q4_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>
-            </div>
+        <div class = "radioGroup ansOptions" id = "q4">
+            <label class="radio-inline"><input type="radio" name="ques4" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques4" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques4" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques4" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques4" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 5</strong></h3>
-        <h4></h4>
+        <h4> Politics and philosophy are taboo topics.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q5" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q5_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>            
-            </div>
+        <div class = "radioGroup ansOptions" id = "q5">
+            <label class="radio-inline"><input type="radio" name="ques5" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques5" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques5" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques5" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques5" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 6</strong></h3>
-        <h4></h4>
+        <h4>You rarely do something just out of sheer curiosity.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q6" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q7_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>           
-            </div>
+        <div class = "radioGroup ansOptions" id = "q6">
+            <label class="radio-inline"><input type="radio" name="ques6" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques6" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques6" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques6" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques6" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 7</strong></h3>
-        <h4></h4>
+        <h4>Going to a club is preferable than going to a bar or pub.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q7" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q7_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>            
-            </div>
+        <div class = "radioGroup ansOptions" id = "q7">
+            <label class="radio-inline"><input type="radio" name="ques7" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques7" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques7" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques7" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques7" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 8</strong></h3>
-        <h4></h4>
+        <h4>Education level is important.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q8" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q8_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>            
-            </div>
+        <div class = "radioGroup ansOptions" id = "q8">
+            <label class="radio-inline"><input type="radio" name="ques8" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques8" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques8" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques8" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques8" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 9</strong></h3>
-        <h4></h4>
-
-        <select data-placeholder="" class="chosen-select" id="q9" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q9_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>
-            </div>
+        <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+        
+        <div class = "radioGroup ansOptions" id = "q9">
+            <label class="radio-inline"><input type="radio" name="ques9" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques9" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques9" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques9" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques9" value = "5">Strongly Agree</label>
         </div>
         <br>
 
         <h3><strong>Question 10</strong></h3>
-        <h4></h4>
+        <h4>You feel more energetic after spending time with a group of people.</h4>
 
-        <select data-placeholder="" class="chosen-select" id="q10" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q10_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results">                   
-                    <li class="active-result" data-option-array-index="1">
-                        1 (Strongly Disagree)
-                    </li>
-                    <li class="active-result" data-option-array-index="2">
-                        2                 
-                    </li>
-                    <li class="active-result" data-option-array-index="3">
-                        3
-                    </li>
-                    <li class="active-result" data-option-array-index="4">
-                        4
-                    </li>
-                    <li class="active-result" data-option-array-index="5">
-                        5 (Strongly Agree)
-                    </li>
-                </ul>            
-            </div>
+        <div class = "radioGroup ansOptions" id = "q10">
+            <label class="radio-inline"><input type="radio" name="ques10" value = "1">Strongly Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques10" value = "2">Disagree</label>
+            <label class="radio-inline"><input type="radio" name="ques10" value = "3">Neutral</label>
+            <label class="radio-inline"><input type="radio" name="ques10" value = "4">Agree</label>
+            <label class="radio-inline"><input type="radio" name="ques10" value = "5">Strongly Agree</label>
         </div>
-        <br>
         <br>
         <!-- Submit Button Here -->
         <button type = "submit" class = "btn btn-primary btn-lg btn-block" id = "submit" >
@@ -491,7 +182,7 @@
         <footer class="footer">
             <div class="container">
                     <p>
-                        <a href="/api/friends">API Friends List</a> |
+                        <a href="/api/friendslist">API Friends List</a> |
                        <a href="https://github.com/mkallgren08/Friendfinder">GitHub Repo</a>
                     </p>
             </div>
@@ -523,9 +214,97 @@
             </div>
           </div>
 
-    <script src = "./data/friends.js"></script>
+    <script>
+
+            // Capture the form inputs 
+            $("#submit").on("click", function(){
+
+                // Form validation
+                function validateForm() {
+                    var isValid = true;
+                    $('.form-control').each(function() {
+                    if ( $(this).val() === '' )
+                        isValid = false;
+                    });
+
+                    var qValArr = []
+                    $('.radioGroup').each(function() {
+                        var id = '#' + $(this).attr('id') + ' input:radio:checked'
+                        var radioCheckVal = $(id).val()
+                        if (radioCheckVal){
+                            qValArr.push(radioCheckVal)
+                        } else {
+                            radioCheckVal = 100
+                            qValArr.push(radioCheckVal)
+                        }
+                    })
+ 
+                    var total = 0
+                    for(var i in qValArr) 
+                        { total += parseInt(qValArr[i]); }
+                    console.log(qValArr);
+                    console.log(total);
+
+                    if (total > qValArr.length*5){
+                        isValid = false
+                    } 
+
+                    return isValid
+
+                    
+                }
+
+                // If all required fields are filled
+                if (validateForm() == true)
+                {
+                    // Create an object for the user's data
+                    var userData = {
+                        name: $("#name").val(),
+                        photo: $("#photo").val(),
+                        scores: [
+                            $("#q1 input:radio:checked").val(), 
+                            $("#q2 input:radio:checked").val(), 
+                            $("#q3 input:radio:checked").val(), 
+                            $("#q4 input:radio:checked").val(), 
+                            $("#q5 input:radio:checked").val(), 
+                            $("#q6 input:radio:checked").val(), 
+                            $("#q7 input:radio:checked").val(), 
+                            $("#q8 input:radio:checked").val(), 
+                            $("#q9 input:radio:checked").val(), 
+                            $("#q10 input:radio:checked").val(), ],
+                        
+                    }
+                
+
+
+                    // Grab the URL of the website
+                    var currentURL = window.location.origin;
+
+                    // AJAX post the data to the friends API. 
+                    $.post(currentURL + "/api/friendslist", userData, function(data){
+
+                    });
+
+                    $.get(currentURL + "/api/friendslist", userData, function(data){
+                    // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                        // $("#matchName").text(data.name);
+                        // $('#matchImg').attr("src", data.photo);
+
+                        // // Show the modal with the best match 
+                        // $("#resultsModal").modal('toggle');
+                    })
+                }
+                else
+                {
+                    alert("Please fill out all fields before submitting!");
+                }
+                
+                return false;
+            });
+    </script>
+    <!-- <script src = "./data/friends.js"></script>
     <script src = "./routing/apiRoutes.js"></script>
-    <script src = "./routing/htmlRoutes.js"></script>
+    <script src = "./routing/htmlRoutes.js"></script> -->
 </body>
 </html>
 
