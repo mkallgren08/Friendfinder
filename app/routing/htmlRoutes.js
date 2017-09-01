@@ -11,6 +11,7 @@ var path = require("path");
 // file, we need to contain all the possible routing into an export
 // function with "app" as a parameter
 
+//Note: I can add app.use(express.static('public')) to avoid writng the "../public/"
 
 module.exports = function(app){
     // Basic route that sends the user to the home page if no destination

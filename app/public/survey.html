@@ -256,7 +256,13 @@
 
                 // If all required fields are filled
                 if (validateForm() == true)
-                {
+                {   
+                    function addScore(array){
+                        var total = 0
+                        for(var i in array) 
+                         { total += parseInt(array[i]); }
+                        return parseInt(total)
+                    }
                     // Create an object for the user's data
                     var userData = {
                         name: $("#name").val(),
@@ -271,7 +277,22 @@
                             $("#q7 input:radio:checked").val(), 
                             $("#q8 input:radio:checked").val(), 
                             $("#q9 input:radio:checked").val(), 
-                            $("#q10 input:radio:checked").val(), ],
+                            $("#q10 input:radio:checked").val(), 
+                        ],
+                        totalScore: addScore(
+                            [
+                            $("#q1 input:radio:checked").val(), 
+                            $("#q2 input:radio:checked").val(), 
+                            $("#q3 input:radio:checked").val(), 
+                            $("#q4 input:radio:checked").val(), 
+                            $("#q5 input:radio:checked").val(), 
+                            $("#q6 input:radio:checked").val(), 
+                            $("#q7 input:radio:checked").val(), 
+                            $("#q8 input:radio:checked").val(), 
+                            $("#q9 input:radio:checked").val(), 
+                            $("#q10 input:radio:checked").val(), 
+                        ],
+                        )
                         
                     }
                 
@@ -282,16 +303,16 @@
 
                     // AJAX post the data to the friends API. 
                     $.post(currentURL + "/api/friendslist", userData, function(data){
+                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                        $("#matchName").text(data.name);
+                        $('#matchImg').attr("src", data.photo);
 
+                        // Show the modal with the best match 
+                        $("#resultsModal").modal('toggle');  
                     });
 
                     $.get(currentURL + "/api/friendslist", userData, function(data){
-                    // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                        // $("#matchName").text(data.name);
-                        // $('#matchImg').attr("src", data.photo);
 
-                        // // Show the modal with the best match 
-                        // $("#resultsModal").modal('toggle');
                     })
                 }
                 else

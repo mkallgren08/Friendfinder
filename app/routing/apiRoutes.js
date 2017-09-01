@@ -1,5 +1,7 @@
 // This file needs to contain the routing to the API object
  var friendsData = require("../data/friends.js")
+ var bestMatch = require("./matchmaker.js")
+ //var qs = require("quicksort")
 
 // Routes
 // =============================================================
@@ -14,11 +16,9 @@ module.exports = function(app) {
       });
 
     app.post('/api/friendslist', function(req, res){
-        friendsData.push(req.body)
+        friendsData.push(req.body);
+        //Be very very very careful of async-bugs here
+        var match = bestMatch(req.body);
+        res.json(match)
     })
-}
-
-  
-  
-
-  
+ }
