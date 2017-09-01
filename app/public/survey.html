@@ -303,17 +303,30 @@
 
                     // AJAX post the data to the friends API. 
                     $.post(currentURL + "/api/friendslist", userData, function(data){
+                    // Clear the data fields
+                        $("#name").val(""),
+                        $("#photo").val(""),
+                        $('input[name=ques1]').attr('checked',false)
+                        $('input[name=ques2]').attr('checked',false)
+                        $('input[name=ques3]').attr('checked',false)
+                        $('input[name=ques4]').attr('checked',false)
+                        $('input[name=ques5]').attr('checked',false)
+                        $('input[name=ques6]').attr('checked',false)
+                        $('input[name=ques7]').attr('checked',false)
+                        $('input[name=ques8]').attr('checked',false)
+                        $('input[name=ques9]').attr('checked',false)
+                        $('input[name=ques10]').attr('checked',false)
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                         $("#matchName").text(data.name);
                         $('#matchImg').attr("src", data.photo);
 
                         // Show the modal with the best match 
                         $("#resultsModal").modal('toggle');  
+
+
                     });
 
-                    $.get(currentURL + "/api/friendslist", userData, function(data){
 
-                    })
                 }
                 else
                 {

@@ -17,10 +17,10 @@ function deltaCheck(array, userIndex, indexUp, indexDown){
             return array[indexUp];
 
         } else { 
-            deltaDown = parseInt(array[userIndex].score) - parseInt(array[indexDown].score);
+            deltaDown = parseInt(array[userIndex].totalScore) - parseInt(array[indexDown].totalScore);
             console.log("Delta Down: " + deltaDown)
     
-            deltaUp = parseInt(array[indexUp].score) - parseInt(array[userIndex].score);
+            deltaUp = parseInt(array[indexUp].totalScore) - parseInt(array[userIndex].totalScore);
             console.log("Delta Up: " + deltaUp)
 
             return deltaCompare(deltaUp, deltaDown, array, indexUp, indexDown)
